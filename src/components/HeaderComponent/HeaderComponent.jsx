@@ -1,6 +1,5 @@
 import React from "react";
 import { Col } from "antd";
-import Search from "antd/es/input/Search";
 import {
   WrapperHeader,
   WrapperHeaderAccout,
@@ -12,22 +11,43 @@ import {
   CaretDownOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
+import ButtonInputSearch from "../ButtonInputSearch/ButtonInputSearch";
 
 const HeaderComponent = () => {
+  const logo =
+    "https://res.cloudinary.com/dylwewmt0/image/upload/v1703313185/PHOTO_LIST/Header/Header_03.png";
   return (
     <div>
+      <div style={{ backgroundColor: "#004aad" }}>
+        <img
+          src={logo}
+          alt="Logo"
+          style={{
+            display: "block",
+            marginLeft: "auto",
+            marginRight: "auto",
+            maxwidth: "85%",
+            height: "auto",
+            backgroundColor: "#F2F2F2",
+          }}
+        />
+      </div>
       <WrapperHeader gutter={16}>
         <Col span={6}>
           <WrapperTextHeader>KNOWLEDGE YOUNG</WrapperTextHeader>
         </Col>
         <Col span={12}>
-          <Search
+          <ButtonInputSearch
+            size="large"
+            textButton="Tìm kiếm"
             placeholder="input search text"
-            enterButton
             // onSearch=(onSearch)
           />
         </Col>
-        <Col span={6} style={{ display: "flex", gap: "20px" }}>
+        <Col
+          span={6}
+          style={{ display: "flex", gap: "20px", alignItems: "center" }}
+        >
           <WrapperHeaderAccout>
             <UserOutlined style={{ fontSize: "30px" }} />
             <div>
